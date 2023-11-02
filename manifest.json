@@ -1,0 +1,27 @@
+{
+  "name": "Ytb_auto_downloader",
+  "version": "1.0.0",
+  "description": "Download your music from youtube automatically",
+  "manifest_version": 3,
+  "author": "Ilyass Acharki",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Ytb_auto_downloader"
+  },
+  "content_scripts" : [
+    {
+        "all_frames" : false,
+        "run_at" : "document_end",
+        "matches" : [ "http://*/*" ],
+        "js" : [
+            "scriptback.js"
+        ]
+    }
+],
+  "scripts": "node server.js",
+  "permissions": ["tabs","activeTab","webNavigation"],
+  "background": {
+    "service_worker": "scriptback.js"
+    
+  }
+}

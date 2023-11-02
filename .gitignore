@@ -1,0 +1,6 @@
+/music/*.mp3
+/music/*.mp4
+!music/.gitkeep
+Youtube_music_history.txt
+/node_modules
+/daemon
